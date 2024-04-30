@@ -41,22 +41,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background-image: url('assets/Vertikal-Banner-Gubook.png');
+            background-size: cover;
+            background-position: center;
+            border-top-right-radius: 5%;
+            border-bottom-right-radius: 5%;
         }
-
         .right-container {
             flex: 2;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .left-container {
-            background-image: url('assets/Vertikal-Banner-Gubook.png');
-            background-size: contain;
-            border-top-right-radius: 5%;
-            border-bottom-right-radius: 5%;
-        }
-        .right-container {
             padding-right: 45px;
             padding-left: 45px;
             
@@ -71,9 +66,8 @@
             outline: none;
             border: none;
         }
-        form h3{
-            font-size: 32px;
-            font-weight: 500;
+        h3{
+            font-size: 1.3rem;
             line-height: 42px;
             text-align: center;
             margin-bottom: 30px;
@@ -112,11 +106,22 @@
             font-weight: 600;
             border-radius: 5px;
             cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #002D5A;
+        }
+        .img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .text-danger {
             color: red;
         }
-        .register-link {
+        .register-link, h4 {
+            font-weight: normal;
             margin-top: 20px;
             text-align: center;
         }
@@ -128,7 +133,14 @@
         color: #01509D;
         text-decoration: none;
         cursor: pointer;
+        }
+
+        @media (max-width: 1768px) {
+        .left-container {
+            background-size: contain;
+        }
     }
+
 
     </style>
 </head>
@@ -138,9 +150,7 @@
     <div class="right-container">
         <form>
             @csrf
-            <center>
-                <img src="assets/logo-gubook.png" alt="">
-            </center>
+            <img class="img" src="assets/logo-gubook.png" alt="">
             <h3>Selamat Datang!</h3>
 
             <label for="email">Alamat Email</label>
