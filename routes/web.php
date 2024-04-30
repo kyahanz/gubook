@@ -21,7 +21,11 @@ Route::get('/login', function () {
     return view('login.login_page');
 });
 
+Route::get('/register', function () {
+    return view('login.register_page');
+})->name('register');
+
 
 // Route::redirect('/login_page.blade.php', '/login');
-Route::redirect('/register_page.blade.php', '/register');
+// Route::redirect('/register_page.blade.php', '/register');
 Route::redirect('/dashboard_page.blade.php', '/dashboard');

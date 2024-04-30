@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <!-- Design by foolishdeveloper.com -->
-    <title>Glassmorphism login Form Tutorial in html css</title>
+    <title>Gubook</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -155,15 +155,14 @@
                 Lupa Kata Sandi?
             </h4>
 
-            <button>Log In</button>
+            <button>Masuk</button>
             
             <div class="register-link">
                 <h4>Dengan membuat akun, Anda menyetujui <span class="h4-blue">Ketentuan Layanan</span> dan <span class="h4-blue">Kebijakan Privasi kami</span></h4>
             </div>
-
             
             <div class="register-link">
-                <h4>Belum punya akun? <a href="#" class="h4-blue">Daftar</a></h4>  
+                <h4>Belum punya akun? <a href="{{ route('register') }}" class="h4-blue">Daftar</a></h4>  
             </div>
         </form>
     </div>

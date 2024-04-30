@@ -1,115 +1,168 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Slide Navbar</title>
-    <link rel="stylesheet" type="text/css" href="slide navbar style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-    <style>body{
-            margin: 0;
+    <!-- Design by foolishdeveloper.com -->
+    <title>Glassmorphism login Form Tutorial in html css</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <!--Stylesheet-->
+    <style media="screen">
+        *,
+        *:before,
+        *:after{
             padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            font-family: 'Jost', sans-serif;
-            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-        }
-        .main{
-            width: 350px;
-            height: 500px;
-            background: red;
+            height: 100vh;
             overflow: hidden;
-            background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
-            border-radius: 10px;
-            box-shadow: 5px 20px 50px #000;
         }
-        #chk{
-            display: none;
-        }
-        .signup{
-            position: relative;
-            width:100%;
+        
+        .container {
+            display: flex;
+            width: 100%;
             height: 100%;
+            background: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        }
+        .left-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-container {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-container {
+            background-image: url('assets/Vertikal-Banner-Gubook.png');
+            background-size: contain;
+            border-top-right-radius: 5%;
+            border-bottom-right-radius: 5%;
+        }
+        .right-container {
+            padding-right: 45px;
+            padding-left: 45px;
+            
+        }
+        form {
+            width: 100%;
+        }
+        form *{
+            font-family: 'Poppins',sans-serif;
+            color: black;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+        form h3{
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+            margin-bottom: 30px;
         }
         label{
-            color: #fff;
-            font-size: 2.3em;
-            justify-content: center;
-            display: flex;
-            margin: 60px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: .5s ease-in-out;
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 500;
         }
-        input{
-            width: 60%;
-            height: 20px;
-            background: #e0dede;
-            justify-content: center;
-            display: flex;
-            margin: 20px auto;
-            padding: 10px;
-            border: none;
-            outline: none;
-            border-radius: 5px;
+        input {
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #000000;
+            border: 1px solid #01509D;
+        }
+
+        ::placeholder{
+            color: #BCBCBC;
         }
         button{
-            width: 60%;
-            height: 40px;
-            margin: 10px auto;
-            justify-content: center;
-            display: block;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: #004180;
             color: #fff;
-            background: #573b8a;
-            font-size: 1em;
-            font-weight: bold;
-            margin-top: 20px;
-            outline: none;
-            border: none;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
             border-radius: 5px;
-            transition: .2s ease-in;
             cursor: pointer;
         }
-        button:hover{
-            background: #6d44b8;
+        .text-danger {
+            color: red;
         }
+        .register-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .kebijakan{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .h4-blue {
+        color: #01509D;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
-        .login label{
-            color: #573b8a;
-            transform: scale(.6);
-        }
-
-
-        #chk:checked ~ .login label{
-            transform: scale(1);
-        }
-        #chk:checked ~ .signup label{
-            transform: scale(.6);
-        }
     </style>
 </head>
 <body>
-<div class="main">
-    <input type="checkbox" id="chk" aria-hidden="true">
-
-    <div class="signup">
-        <form action="{{route('register-post')}}"method="post">
+<div class="container">
+    <div class="left-container"></div>
+    <div class="right-container">
+        <form>
             @csrf
-            <label for="chk" aria-hidden="true">Sign up</label>
-            <input type="text" name="name" placeholder="User name" required="">
-            <span class="text-danger">@error('name'){{$message}}@enderror</span>
-            <input type="email" name="email" placeholder="Email" required="">
+            <center>
+                <img src="assets/logo-gubook.png" alt="">
+            </center>
+            <h3>Selamat Datang!</h3>
+
+            <label for="email">Alamat Email</label>
+            <input type="email" placeholder="Masukkan alamat email" name="email">
             <span class="text-danger">@error('email'){{$message}}@enderror</span>
-            <input type="password" name="password" placeholder="Password" required="">
+
+            <label for="password">Kata Sandi</label>
+            <input type="password" placeholder="Masukkan kata sandi" name="password">
             <span class="text-danger">@error('password'){{$message}}@enderror</span>
-            <button>Sign up</button>
-            <a href="login_page.blade.php">Already registered !! Login Here.</a>
+           
+            <label for="password">Konfirmasi Kata Sandi</label>
+            <input type="password" placeholder="Masukkan kata sandi" name="password">
+            <span class="text-danger">@error('password'){{$message}}@enderror</span>
+
+            <button>Daftar</button>
+            
+            <div class="register-link">
+                <h4>Dengan membuat akun, Anda menyetujui <span class="h4-blue">Ketentuan Layanan</span> dan <span class="h4-blue">Kebijakan Privasi kami</span></h4>
+            </div>
+            
         </form>
     </div>
-
-
 </div>
-@include('sweetalert::alert')
-@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 </body>
 </html>
